@@ -34,8 +34,9 @@
   )
 
   (setup
-    (last_trace_width 0.2)
+    (last_trace_width 0.4)
     (user_trace_width 0.2)
+    (user_trace_width 0.4)
     (user_trace_width 0.5)
     (user_trace_width 0.75)
     (user_trace_width 1)
@@ -4414,8 +4415,6 @@
   (segment (start 157.5 146.7) (end 156.87501 146.07501) (width 0.5) (layer F.Cu) (net 20))
   (segment (start 156.87501 146.07501) (end 156.87501 145.57501) (width 0.5) (layer F.Cu) (net 20))
   (segment (start 160.750002 146.7) (end 160.750002 146.7) (width 0.5) (layer F.Cu) (net 20))
-  (segment (start 161.175 148.235) (end 161.175 147.124998) (width 0.5) (layer F.Cu) (net 20))
-  (segment (start 161.175 147.124998) (end 160.750002 146.7) (width 0.5) (layer F.Cu) (net 20))
   (segment (start 155 141.2) (end 155 145.15001) (width 0.5) (layer F.Cu) (net 20))
   (segment (start 153.1 139.3) (end 155 141.2) (width 0.5) (layer F.Cu) (net 20))
   (segment (start 156.45001 145.15001) (end 155 145.15001) (width 0.5) (layer F.Cu) (net 20))
@@ -4439,6 +4438,8 @@
   (segment (start 153 132.5) (end 153 137.5) (width 0.5) (layer B.Cu) (net 20))
   (segment (start 153 130.5625) (end 154.5 129.0625) (width 0.5) (layer F.Cu) (net 20))
   (segment (start 153 132.5) (end 153 130.5625) (width 0.5) (layer F.Cu) (net 20))
+  (segment (start 161.175 147.124998) (end 161.175 148.235) (width 0.4) (layer F.Cu) (net 20))
+  (segment (start 160.750002 146.7) (end 161.175 147.124998) (width 0.4) (layer F.Cu) (net 20))
   (via (at 156 129.75) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 21))
   (segment (start 154.5 130.9375) (end 154.5 134.0625) (width 0.25) (layer F.Cu) (net 21))
   (segment (start 156.024999 128.598001) (end 156 128.623) (width 0.25) (layer B.Cu) (net 21))
