@@ -982,21 +982,6 @@ F 3 "" H 5000 4150 50  0001 C CNN
 	1    5000 4150
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x02_Male J2
-U 1 1 5CB5850B
-P 5350 2150
-F 0 "J2" H 5323 2123 50  0000 R CNN
-F 1 "Conn_01x02_Male" H 5323 2032 50  0000 R CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 5350 2150 50  0001 C CNN
-F 3 "~" H 5350 2150 50  0001 C CNN
-	1    5350 2150
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	4750 2150 5150 2150
-Wire Wire Line
-	4750 2250 5150 2250
 NoConn ~ 4750 1250
 NoConn ~ 4750 1350
 NoConn ~ 4750 1750
@@ -2031,4 +2016,6 @@ Wire Wire Line
 Connection ~ 1400 9650
 Text Notes 1000 8950 0    50   ~ 0
 Voltage Divider for ADC \n
+NoConn ~ 4750 2150
+NoConn ~ 4750 2250
 $EndSCHEMATC
