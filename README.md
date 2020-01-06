@@ -40,3 +40,5 @@ See https://www.silabs.com/products/development-tools/software/usb-to-uart-bridg
 
 ### Usage in Arduino environment
 To use with Arduino, ensure that you have ESP32 boards added (if you have not, see https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/ for some good instructions), and then select **VintLabs ESP32 DevKit** in *Tools->Board*. (If you do not see it in the list, please make sure that the ESP32 core is updated)
+
+Example code: https://github.com/vintlabs/VintLabs-PWM-Arduino-Basic-Example
