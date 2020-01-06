@@ -8,6 +8,10 @@ The PWM driver board is powered by an ESP32 and features 8 PWM outputs that can 
 
 The primary purpose of the design is to control LED lighting (like these: https://www.amazon.ca/gp/product/B00QN4X5MM/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1  I am not affiliated with this seller, but the LED strips are great!), however there may be many other uses, like controlling DC motors! The board can be powered by either USB or by connecting 5-24V to the power input connector (connecting both is fine!), however do note that to use the PWM outputs an external power source is strongly recommended, as otherwise it will try to use the power from the USB bus and likely would cause power/stability issues.
 
+### Schematic:
+RevA: https://github.com/vintlabs/ESP32-PWM-Driver-Devkit/raw/master/ESP32-PWM-Driver-Devkit-RevA-schematic.pdf
+RevB: https://github.com/vintlabs/ESP32-PWM-Driver-Devkit/raw/master/ESP32-PWM-Driver-Devkit-RevB-schematic.pdf
+
 ### Connecting via USB
 #### Linux
 If the device is not detected, you may need to add `CONFIG_USB_SERIAL_CP210X=m` to your kernel config:
