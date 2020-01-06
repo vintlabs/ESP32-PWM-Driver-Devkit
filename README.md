@@ -1,7 +1,7 @@
 # ESP32-PWM-Driver-Devkit
 ## ESP32 Development kit with 8 PWM outputs that can be driven at 5-24V at up to 2A each
 
-### Board top:
+### Board and Pinout:
 ![Board Top and Pinout](https://github.com/vintlabs/ESP32-PWM-Driver-Devkit/raw/master/VintLabsESP32_PWM_Driver_Pinout.png)
 
 The PWM driver board is powered by an ESP32 and features 8 PWM outputs that can power LED lighting at 5-24V at up to 2A each. It can also be used as a general-purpose ESP32 development kit.
