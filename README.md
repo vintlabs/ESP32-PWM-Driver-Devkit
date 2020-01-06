@@ -8,5 +8,31 @@ The PWM driver board is powered by an ESP32 and features 8 PWM outputs that can 
 
 The primary purpose of the design is to control LED lighting (like these: https://www.amazon.ca/gp/product/B00QN4X5MM/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1  I am not affiliated with this seller, but the LED strips are great!), however there may be many other uses, like controlling DC motors! The board can be powered by either USB or by connecting 5-24V to the power input connector (connecting both is fine!), however do note that to use the PWM outputs an external power source is strongly recommended, as otherwise it will try to use the power from the USB bus and likely would cause power/stability issues.
 
+### Connecting via USB
+#### Linux
+If the device is not detected, you may need to add `CONFIG_USB_SERIAL_CP210X=m` to your kernel config:
+```
+Device Drivers --->
+	USB Support --->
+		USB Serial Converter Support --->
+			<M>   USB CP210x family of UART Bridge Controllers  
+```
+
+If it's detected, you should see the following in /var/log/messages (may be syslog or other file depending on your distro):
+```
+Dec 31 17:57:51 nautilus kernel: usb 1-2.4: new full-speed USB device number 35 using ehci-pci
+Dec 31 17:57:51 nautilus kernel: usb 1-2.4: New USB device found, idVendor=10c4, idProduct=ea60, bcdDevice= 1.00
+Dec 31 17:57:51 nautilus kernel: usb 1-2.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Dec 31 17:57:51 nautilus kernel: usb 1-2.4: Product: CP2102N USB to UART Bridge Controller
+Dec 31 17:57:51 nautilus kernel: usb 1-2.4: Manufacturer: VintLabs
+Dec 31 17:57:51 nautilus kernel: usb 1-2.4: SerialNumber: 0002
+Dec 31 17:57:51 nautilus kernel: cp210x 1-2.4:1.0: cp210x converter detected
+Dec 31 17:57:51 nautilus kernel: usb 1-2.4: cp210x converter now attached to ttyUSB0
+```
+
+
+#### Windows
+See https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
+
 ### Usage in Arduino environment
 To use with Arduino, ensure that you have ESP32 boards added (if you have not, see https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/ for some good instructions), and then select **VintLabs ESP32 DevKit** in *Tools->Board*. (If you do not see it in the list, please make sure that the ESP32 core is updated)
