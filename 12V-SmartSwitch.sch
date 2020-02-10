@@ -148,7 +148,7 @@ U 1 1 5C196E97
 P 1350 1400
 F 0 "J1" H 1430 1392 50  0000 L CNN
 F 1 "Screw_Terminal_01x02" H 1430 1301 50  0000 L CNN
-F 2 "12V-SmartSwitch:SCREW TERMINAL BLOCK 3.5MM 2POS" H 1350 1400 50  0001 C CNN
+F 2 "digikey-footprints:Term_Block_1x2_P5.08MM" H 1350 1400 50  0001 C CNN
 F 3 "~" H 1350 1400 50  0001 C CNN
 	1    1350 1400
 	-1   0    0    -1  
@@ -1072,18 +1072,6 @@ Text GLabel 4300 8550 0    50   BiDi ~ 0
 IO0
 Text GLabel 5800 9450 2    50   BiDi ~ 0
 IO13
-Text GLabel 2900 8800 0    50   BiDi ~ 0
-SD2
-Text GLabel 2900 8900 0    50   BiDi ~ 0
-SD3
-Text GLabel 2900 9000 0    50   BiDi ~ 0
-CMD
-Text GLabel 2900 9100 0    50   BiDi ~ 0
-SDCLK
-Text GLabel 2900 9200 0    50   BiDi ~ 0
-SD0
-Text GLabel 2900 9300 0    50   BiDi ~ 0
-SD1
 Text GLabel 5800 10050 2    50   BiDi ~ 0
 IO15
 Text GLabel 4300 8650 0    50   BiDi ~ 0
@@ -1859,17 +1847,6 @@ F 2 "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical" H 5600 9250 50 
 F 3 "~" H 5600 9250 50  0001 C CNN
 	1    5600 9250
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x06_Male J4
-U 1 1 5C78F51B
-P 3100 9000
-F 0 "J4" H 3073 8973 50  0000 R CNN
-F 1 "Conn_01x06_Male" H 3073 8882 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 3100 9000 50  0001 C CNN
-F 3 "~" H 3100 9000 50  0001 C CNN
-	1    3100 9000
-	-1   0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0111
