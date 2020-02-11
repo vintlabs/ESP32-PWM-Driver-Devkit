@@ -821,8 +821,6 @@ Wire Wire Line
 Wire Wire Line
 	7700 3450 7850 3450
 Connection ~ 7700 3450
-Text Notes 6450 8600 0    50   ~ 0
-Pinout on last 5 pins to match\nRaspberry Pi for use with\nVintLabs modules
 $Comp
 L Device:R R19
 U 1 1 5CA70DCC
@@ -874,27 +872,6 @@ F 3 "" H 5650 5900 50  0001 C CNN
 $EndComp
 Text Notes 5300 6050 2    50   ~ 0
 Place pullup and cap\nnear pin3 on ESP32 module
-Text GLabel 5800 8750 2    50   BiDi ~ 0
-IO35
-Text GLabel 5800 8650 2    50   BiDi ~ 0
-IO34
-$Comp
-L power:VDD #PWR039
-U 1 1 5CAC9F90
-P 6100 8300
-F 0 "#PWR039" H 6100 8150 50  0001 C CNN
-F 1 "VDD" H 6117 8473 50  0000 C CNN
-F 2 "" H 6100 8300 50  0001 C CNN
-F 3 "" H 6100 8300 50  0001 C CNN
-	1    6100 8300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5800 8550 6100 8550
-Wire Wire Line
-	6100 8550 6100 8300
-Text GLabel 5800 9650 2    50   BiDi ~ 0
-IO33
 $Comp
 L Device:R R3
 U 1 1 5CAEF221
@@ -1046,99 +1023,6 @@ Text GLabel 8650 3450 3    50   BiDi ~ 0
 IO15
 Text GLabel 8750 3450 3    50   BiDi ~ 0
 IO2
-Text GLabel 4300 9650 0    50   Output ~ 0
-TxD
-Text GLabel 4300 9550 0    50   Input ~ 0
-RxD
-Text GLabel 4300 9850 0    50   BiDi ~ 0
-IO23
-Text GLabel 4300 9750 0    50   BiDi ~ 0
-IO22
-Text GLabel 4300 9450 0    50   BiDi ~ 0
-IO21
-Text GLabel 4300 9350 0    50   BiDi ~ 0
-IO19
-Text GLabel 4300 9250 0    50   BiDi ~ 0
-IO18
-Text GLabel 4300 9150 0    50   BiDi ~ 0
-IO5
-Text GLabel 4300 9050 0    50   BiDi ~ 0
-IO17
-Text GLabel 4300 8950 0    50   BiDi ~ 0
-IO16
-Text GLabel 4300 8750 0    50   BiDi ~ 0
-IO4
-Text GLabel 4300 8550 0    50   BiDi ~ 0
-IO0
-Text GLabel 5800 9450 2    50   BiDi ~ 0
-IO13
-Text GLabel 5800 10050 2    50   BiDi ~ 0
-IO15
-Text GLabel 4300 8650 0    50   BiDi ~ 0
-IO2
-Text GLabel 5800 9250 2    50   BiDi ~ 0
-EN
-Text GLabel 5800 9150 2    50   BiDi ~ 0
-SENSOR_VP
-Text GLabel 5800 9050 2    50   BiDi ~ 0
-SENSOR_VN
-Text GLabel 5800 8850 2    50   BiDi ~ 0
-IO32
-Text GLabel 5800 9750 2    50   BiDi ~ 0
-IO25
-Text GLabel 5800 9850 2    50   BiDi ~ 0
-IO26
-Text GLabel 5800 9950 2    50   BiDi ~ 0
-IO27
-Text GLabel 5800 9550 2    50   BiDi ~ 0
-IO14
-Text GLabel 5800 9350 2    50   BiDi ~ 0
-IO12
-$Comp
-L power:VDD #PWR043
-U 1 1 5CBCA8A5
-P 3850 9900
-F 0 "#PWR043" H 3850 9750 50  0001 C CNN
-F 1 "VDD" H 3867 10073 50  0000 C CNN
-F 2 "" H 3850 9900 50  0001 C CNN
-F 3 "" H 3850 9900 50  0001 C CNN
-	1    3850 9900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR044
-U 1 1 5CBCCEC1
-P 3850 10100
-F 0 "#PWR044" H 3850 9850 50  0001 C CNN
-F 1 "GND" H 3855 9927 50  0000 C CNN
-F 2 "" H 3850 10100 50  0001 C CNN
-F 3 "" H 3850 10100 50  0001 C CNN
-	1    3850 10100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4300 9950 3850 9950
-Wire Wire Line
-	3850 9950 3850 9900
-Wire Wire Line
-	4300 10050 3850 10050
-Wire Wire Line
-	3850 10050 3850 10100
-$Comp
-L power:GND #PWR042
-U 1 1 5CBDC67B
-P 6500 9050
-F 0 "#PWR042" H 6500 8800 50  0001 C CNN
-F 1 "GND" H 6505 8877 50  0000 C CNN
-F 2 "" H 6500 9050 50  0001 C CNN
-F 3 "" H 6500 9050 50  0001 C CNN
-	1    6500 9050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5800 8950 6500 8950
-Wire Wire Line
-	6500 8950 6500 9050
 $Comp
 L Device:R R4
 U 1 1 5CBFD6B3
@@ -1826,43 +1710,6 @@ F 3 "~" H 3100 1800 50  0001 C CNN
 	1    3100 1800
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x16_Male J5
-U 1 1 5C77B131
-P 4500 9250
-F 0 "J5" H 4473 9223 50  0000 R CNN
-F 1 "Conn_01x16_Male" H 4473 9132 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical" H 4500 9250 50  0001 C CNN
-F 3 "~" H 4500 9250 50  0001 C CNN
-	1    4500 9250
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x16_Male J7
-U 1 1 5C77B259
-P 5600 9250
-F 0 "J7" H 5706 10128 50  0000 C CNN
-F 1 "Conn_01x16_Male" H 5706 10037 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical" H 5600 9250 50  0001 C CNN
-F 3 "~" H 5600 9250 50  0001 C CNN
-	1    5600 9250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0111
-U 1 1 5C7A3639
-P 3850 8900
-F 0 "#PWR0111" H 3850 8650 50  0001 C CNN
-F 1 "GND" H 3855 8727 50  0000 C CNN
-F 2 "" H 3850 8900 50  0001 C CNN
-F 3 "" H 3850 8900 50  0001 C CNN
-	1    3850 8900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4300 8850 3850 8850
-Wire Wire Line
-	3850 8850 3850 8900
 $Comp
 L Device:CP C10
 U 1 1 5C8AB0FC
