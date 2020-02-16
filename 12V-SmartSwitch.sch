@@ -590,35 +590,13 @@ Wire Wire Line
 Wire Wire Line
 	4150 2750 4250 2750
 Connection ~ 4150 2750
-$Comp
-L Jumper:SolderJumper_2_Bridged JP1
-U 1 1 5C8B98F8
-P 5400 1550
-F 0 "JP1" H 5400 1755 50  0000 C CNN
-F 1 "SolderJumper_2_Bridged" H 5400 1664 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_Pad1.0x1.5mm" H 5400 1550 50  0001 C CNN
-F 3 "~" H 5400 1550 50  0001 C CNN
-	1    5400 1550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Jumper:SolderJumper_2_Bridged JP2
-U 1 1 5C8B99E3
-P 5400 1650
-F 0 "JP2" H 5400 1532 50  0000 C CNN
-F 1 "SolderJumper_2_Bridged" H 5400 1764 50  0001 C BNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_Pad1.0x1.5mm" H 5400 1650 50  0001 C CNN
-F 3 "~" H 5400 1650 50  0001 C CNN
-	1    5400 1650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5250 1650 4750 1650
 Wire Wire Line
 	4750 1550 5250 1550
-Text GLabel 5550 1550 2    50   Input ~ 0
+Text GLabel 5250 1550 2    50   Input ~ 0
 TxD
-Text GLabel 5550 1650 2    50   Output ~ 0
+Text GLabel 5250 1650 2    50   Output ~ 0
 RxD
 Text GLabel 9150 2000 2    50   Output ~ 0
 TxD
@@ -1754,31 +1732,6 @@ Wire Wire Line
 	6550 1700 6200 1700
 Connection ~ 6550 1700
 $Comp
-L Device:R R29
-U 1 1 5C81D173
-P 4300 7200
-F 0 "R29" V 4093 7200 50  0000 C CNN
-F 1 "10k" V 4184 7200 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 4230 7200 50  0001 C CNN
-F 3 "~" H 4300 7200 50  0001 C CNN
-	1    4300 7200
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	4450 7000 4450 7200
-Connection ~ 4450 7000
-$Comp
-L power:VDD #PWR0112
-U 1 1 5C889A5F
-P 4150 7200
-F 0 "#PWR0112" H 4150 7050 50  0001 C CNN
-F 1 "VDD" H 4167 7373 50  0000 C CNN
-F 2 "" H 4150 7200 50  0001 C CNN
-F 3 "" H 4150 7200 50  0001 C CNN
-	1    4150 7200
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Device:R R27
 U 1 1 5D5B21E6
 P 1400 9500
@@ -1865,4 +1818,156 @@ Wire Wire Line
 Wire Wire Line
 	12450 8500 12450 8600
 Connection ~ 12450 8600
+Text Notes 12750 8900 0    50   ~ 0
+make sure it's a good cage clamp conn
+$Comp
+L Device:R R30
+U 1 1 5E618A34
+P 6650 4250
+F 0 "R30" H 6720 4296 50  0000 L CNN
+F 1 "47.5k" H 6720 4205 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6580 4250 50  0001 C CNN
+F 3 "~" H 6650 4250 50  0001 C CNN
+	1    6650 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 5E618A3A
+P 6650 4400
+F 0 "#PWR0111" H 6650 4150 50  0001 C CNN
+F 1 "GND" H 6655 4227 50  0000 C CNN
+F 2 "" H 6650 4400 50  0001 C CNN
+F 3 "" H 6650 4400 50  0001 C CNN
+	1    6650 4400
+	1    0    0    -1  
+$EndComp
+Text GLabel 6650 4100 1    50   BiDi ~ 0
+IO15
+Text Notes 6750 4050 0    50   ~ 0
+Weak pull-down for GPIO15 to compensate\nfor weak pull-up at boot time.
+$Comp
+L Connector_Generic:Conn_01x05 J4
+U 1 1 5E640802
+P 8850 6550
+F 0 "J4" H 8930 6592 50  0000 L CNN
+F 1 "Conn_01x05" H 8930 6501 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 8850 6550 50  0001 C CNN
+F 3 "~" H 8850 6550 50  0001 C CNN
+	1    8850 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0116
+U 1 1 5E6418B0
+P 8650 6350
+F 0 "#PWR0116" H 8650 6200 50  0001 C CNN
+F 1 "VDD" H 8667 6523 50  0000 C CNN
+F 2 "" H 8650 6350 50  0001 C CNN
+F 3 "" H 8650 6350 50  0001 C CNN
+	1    8650 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0117
+U 1 1 5E64922D
+P 8650 6750
+F 0 "#PWR0117" H 8650 6500 50  0001 C CNN
+F 1 "GND" H 8655 6577 50  0000 C CNN
+F 2 "" H 8650 6750 50  0001 C CNN
+F 3 "" H 8650 6750 50  0001 C CNN
+	1    8650 6750
+	1    0    0    -1  
+$EndComp
+Text GLabel 8650 6550 0    50   BiDi ~ 0
+IO22
+Text GLabel 8650 6650 0    50   BiDi ~ 0
+IO23
+Text GLabel 8650 6450 0    50   BiDi ~ 0
+IO21
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 5E6C5A29
+P 8700 5450
+F 0 "J5" H 8780 5442 50  0000 L CNN
+F 1 "Conn_01x02" H 8780 5351 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8700 5450 50  0001 C CNN
+F 3 "~" H 8700 5450 50  0001 C CNN
+	1    8700 5450
+	1    0    0    -1  
+$EndComp
+Text Notes 8600 5200 0    50   ~ 0
+3v3 Serial
+Text GLabel 8500 5450 0    50   Output ~ 0
+TxD
+Text GLabel 8500 5550 0    50   Input ~ 0
+RxD
+Text Notes 9350 4250 0    118  ~ 0
+I2C temp sensor
+$Comp
+L tc74a5:TC74A5 U4
+U 1 1 5E7E8674
+P 10100 4900
+F 0 "U4" H 10100 5381 50  0000 C CNN
+F 1 "TC74A5" H 10100 5290 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 10250 5150 50  0001 C CNN
+F 3 "https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/2_Humidity_Sensors/Sensirion_Humidity_Sensors_SHT1x_Datasheet.pdf" H 10250 5150 50  0001 C CNN
+	1    10100 4900
+	1    0    0    -1  
+$EndComp
+Text GLabel 10400 5000 2    50   BiDi ~ 0
+IO22
+Text GLabel 10400 4800 2    50   BiDi ~ 0
+IO21
+$Comp
+L power:GND #PWR0112
+U 1 1 5E80618A
+P 10050 5200
+F 0 "#PWR0112" H 10050 4950 50  0001 C CNN
+F 1 "GND" H 10055 5027 50  0000 C CNN
+F 2 "" H 10050 5200 50  0001 C CNN
+F 3 "" H 10050 5200 50  0001 C CNN
+	1    10050 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0118
+U 1 1 5E80DD3C
+P 9450 4800
+F 0 "#PWR0118" H 9450 4550 50  0001 C CNN
+F 1 "GND" H 9455 4627 50  0000 C CNN
+F 2 "" H 9450 4800 50  0001 C CNN
+F 3 "" H 9450 4800 50  0001 C CNN
+	1    9450 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C12
+U 1 1 5E815AEA
+P 9450 4650
+F 0 "C12" H 9565 4696 50  0000 L CNN
+F 1 "0.1u" H 9565 4605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9488 4500 50  0001 C CNN
+F 3 "~" H 9450 4650 50  0001 C CNN
+	1    9450 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0119
+U 1 1 5E81D7C1
+P 9450 4500
+F 0 "#PWR0119" H 9450 4350 50  0001 C CNN
+F 1 "VDD" H 9467 4673 50  0000 C CNN
+F 2 "" H 9450 4500 50  0001 C CNN
+F 3 "" H 9450 4500 50  0001 C CNN
+	1    9450 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 4600 9800 4600
+Wire Wire Line
+	9800 4500 9450 4500
+Wire Wire Line
+	9800 4500 9800 4600
+Connection ~ 9450 4500
 $EndSCHEMATC
