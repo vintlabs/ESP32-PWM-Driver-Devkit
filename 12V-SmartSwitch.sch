@@ -145,13 +145,13 @@ Connection ~ 1200 5550
 $Comp
 L Connector:Screw_Terminal_01x02 J1
 U 1 1 5C196E97
-P 1350 1400
-F 0 "J1" H 1430 1392 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 1430 1301 50  0000 L CNN
-F 2 "digikey-footprints:Term_Block_1x2_P5.08MM" H 1350 1400 50  0001 C CNN
-F 3 "~" H 1350 1400 50  0001 C CNN
-	1    1350 1400
-	-1   0    0    -1  
+P 1350 1500
+F 0 "J1" H 1430 1492 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 1430 1401 50  0000 L CNN
+F 2 "digikey-footprints:Term_Block_1x2_P5.08MM" H 1350 1500 50  0001 C CNN
+F 3 "~" H 1350 1500 50  0001 C CNN
+	1    1350 1500
+	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR07
